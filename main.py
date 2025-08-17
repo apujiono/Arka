@@ -44,3 +44,7 @@ def home():
         "features": ["chat", "memory", "user-recognition", "plugins"],
         "message": "Aku siap membantumu menjadi versi terbaik dari dirimu."
     }
+# Hanya jalankan server jika di lokal
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
