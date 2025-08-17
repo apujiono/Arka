@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+ollama
+langchain
+chromadb
+cryptography
+scikit-learn
+numpy
+python-dotenv
