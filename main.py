@@ -1,12 +1,13 @@
 
 from fastapi import FastAPI, HTTPException
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 import os
 import json
 import uvicorn
 
 app = FastAPI()
-
+app.mount("/", StaticFiles(directory="frontend/dist", html=True), name="static")
 # Load system prompt
 try:
     with open("backend/prompts/system_prompt.txt", "r") as f:
